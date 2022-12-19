@@ -93,7 +93,7 @@
 }
 
 .post-card__author-name {
-  margin-left: 7px;
+  margin-left: 8px;
 }
 
 .post-card__date {
@@ -114,7 +114,7 @@
 }
 
 .post-card__content {
-  margin-top: 17px;
+  margin-top: 16px;
 }
 
 .post-card__headline {
@@ -133,7 +133,7 @@
 }
 
 .post-card__info {
-  margin-top: 35px;
+  margin-top: 36px;
 
   display: flex;
   justify-content: space-between;
@@ -142,11 +142,12 @@
 
 .post-card__counters {
   display: flex;
-  gap: 12px;
+  gap: 5px;
 }
 
 .post-card__likes,
 .post-card__viewed {
+  margin-left: 7px;
   padding-left: 18px;
 
   font-size: 12px;
