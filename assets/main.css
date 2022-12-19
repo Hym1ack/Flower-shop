@@ -121,12 +121,12 @@ body {
 .footer__nav {
   display: flex;
 }
-.nav__links {
+.footer-nav__links {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.nav__links:not(:last-child) {
+.footer-nav__links:not(:last-child) {
   margin-right: 131px;
 }
 .footer-nav__title {
