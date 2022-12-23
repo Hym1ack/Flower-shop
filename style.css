@@ -1,6 +1,30 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -4px;
+  font-size: 32px;
+  line-height: 38px;
+  color: #000000;
+}
+.title::before,
+.title::after {
+  content: '';
+  display: block;
+  width: 165px;
+  height: 2px;
+  background: #d9d9d9;
+}
+.title::before {
+  margin-right: 19px;
+}
+.title::after {
+  margin-left: 19px;
+}
+
 .preview {
   margin-top: 73px;
-  margin-bottom: 109px;
+  margin-bottom: 117px;
 
   display: flex;
   justify-content: space-between;
@@ -8,6 +32,7 @@
 
 .preview__box {
   max-width: 406px;
+  margin-top: -4px;
 }
 
 .preview__title {
@@ -18,7 +43,7 @@
 }
 
 .preview__descr {
-  margin-top: 36px;
+  margin-top: 38px;
 
   font-size: 20px;
   line-height: 23px;
@@ -55,30 +80,7 @@
 
 .best-selers {
 }
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  font-size: 32px;
-  letter-spacing: -0.5;
-  line-height: 38px;
-  color: #000000;
-}
-.title::before,
-.title::after {
-  content: '';
-  display: block;
-  width: 165px;
-  height: 2px;
-  background: #d9d9d9;
-}
-.title::before {
-  margin-right: 19px;
-}
-.title::after {
-  margin-left: 19px;
-}
 .best-selers_heading {
   margin-bottom: 32px;
 }
