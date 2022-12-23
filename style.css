@@ -53,6 +53,10 @@
 
 /* posts  */
 
+.latest-posts_heading {
+  margin-bottom: 26px;
+}
+
 .post-cards {
   display: flex;
   gap: 33px;
