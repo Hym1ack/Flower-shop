@@ -125,25 +125,30 @@
 }
 
 .product__card-add {
+  padding-left: 25px;
+
   position: relative;
   top: -1px;
   left: 6px;
-  padding-left: 25px;
+
+  cursor: pointer;
   font-size: 18px;
   line-height: 21px;
   color: #ff8f52;
 }
 
 .product__card-add::before {
-  position: absolute;
   content: '';
+  width: 20px;
+  height: 19px;
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
   background-image: url('./assets/img/cart.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 20px;
-  height: 19px;
-  left: 0px;
-  top: 0px;
 }
 
 /* posts  */
