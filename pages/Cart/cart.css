@@ -1,0 +1,168 @@
+/* CART */
+.cart__inner {
+  width: 100%;
+  margin-top: 36px;
+  display: flex;
+}
+.cart {
+  max-width: 793px;
+  width: 100%;
+
+  margin-right: 20px;
+  padding: 33px 41px 46px 41px;
+
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.cart__title {
+  margin-bottom: 48px;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #000000;
+}
+.list {
+}
+.item {
+  width: 100%;
+  display: flex;
+  margin-bottom: 31px;
+}
+
+.item__img {
+  max-width: 146px;
+  width: 100%;
+  height: 146px;
+  margin-right: 30px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.item__info {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.item__title {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.item__descr {
+  margin-bottom: 42px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #838383;
+}
+
+.item__price {
+  margin-bottom: 3px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #838383;
+}
+
+.item__count-box {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 6.2px 4px 7px;
+
+  border: 1px solid #ff8f52;
+  border-radius: 5px;
+}
+
+.item__minus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 11.8px;
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+}
+
+.item__count {
+  padding: 0 12px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #121212;
+}
+
+.item__plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 11.8px;
+  width: 100%;
+  height: 11.8px;
+  cursor: pointer;
+}
+
+.item__remove {
+  max-width: 15px;
+  width: 100%;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+.item__remove-img {
+  width: 100%;
+}
+
+.item__total-price {
+  position: absolute;
+  bottom: 4px;
+  right: 3px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+
+/* TOTAL */
+
+.total {
+  max-width: 387px;
+  width: 100%;
+  max-height: 137px;
+  padding: 33px 16px 20px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-radius: 5px;
+}
+.total__title {
+  margin-left: 4px;
+  margin-bottom: 21px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.total__price {
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.total__btn {
+  display: block;
+  padding: 10px 140px;
+
+  background: #ff8f52;
+  border-radius: 5px;
+}
