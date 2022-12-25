@@ -79,7 +79,7 @@ body {
 .header__info {
   display: flex;
   align-items: center;
-  margin-top: -5px;
+  padding-bottom: 3px;
 }
 .header-info__link {
   display: inline-block;
