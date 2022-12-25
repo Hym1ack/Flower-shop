@@ -1,0 +1,145 @@
+.product {
+  display: flex;
+  gap: 60px;
+  margin-top: 46px;
+  margin-bottom: 37px;
+  padding: 50px 52px 51px 50px;
+
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.product__image-box {
+  max-width: 356px;
+  height: 326px;
+}
+
+.product__image {
+  width: inherit;
+  height: 100%;
+
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.product__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product__title {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.product__descr {
+  font-size: 22px;
+  line-height: 35px;
+  color: #838383;
+}
+
+.product__rate {
+  margin-bottom: 7px;
+}
+
+.product__rating {
+  padding-left: 27px;
+  margin-bottom: 4px;
+
+  font-size: 22px;
+  line-height: 26px;
+
+  position: relative;
+}
+
+.product__rating::before {
+  content: '';
+
+  position: absolute;
+  top: 2px;
+  left: 0;
+
+  background-image: url(../../assets/img/star.svg);
+  width: 20px;
+  height: 17.5px;
+}
+
+.product__reviewers {
+  font-size: 18px;
+  line-height: 21px;
+  color: #838383;
+}
+
+.product__bottom {
+  display: flex;
+  height: 40px;
+}
+
+.product__price {
+  display: inline-block;
+  align-self: flex-end;
+  margin-right: auto;
+
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.product__favourite-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  max-width: 177px;
+  width: 100%;
+  padding: 10px 10px 10px 14px;
+
+  border: 1px solid #ff8f52;
+  border-radius: 5px;
+
+  font-size: 18px;
+  line-height: 21px;
+  color: #ff8f52;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.product__favourite-btn:hover {
+  background-color: #ff8f52;
+  color: #fff;
+}
+
+.product__cart-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  max-width: 161px;
+  width: 100%;
+  padding: 9px 15px 10px 23px;
+  margin-left: 9px;
+
+  background: #ff8f52;
+  border: 1px solid #ff8f52;
+  border-radius: 5px;
+
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+.product__cart-btn:hover {
+  background-color: #fff;
+  color: #ff8f52;
+}
+
+.product__favourite-btn:hover .product__favourite-img path {
+  fill: #fff;
+}
+
+.product__cart-btn:hover .product__cart-img path {
+  fill: #ff8f52;
+}
