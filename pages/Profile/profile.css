@@ -1,0 +1,288 @@
+/* Dashboard */
+
+.dashboard {
+  display: flex;
+  background: #ffffff;
+  margin-top: 83px;
+  margin-bottom: 222px;
+}
+
+/* User panel */
+
+.user-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 21px;
+  padding-left: 24px;
+  padding-bottom: 25px;
+  max-width: 325px;
+  width: 100%;
+  border-right: 1px solid #f2f2f2;
+}
+
+.user-panel__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.user-panel__img {
+  width: 78px;
+  height: 78px;
+  margin-right: 21px;
+}
+
+.user-panel__data {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-panel__name {
+  margin-bottom: 6px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.user-panel__out {
+  align-self: flex-start;
+  font-size: 18px;
+  line-height: 21px;
+  color: #838383;
+}
+
+.user-panel__tabs {
+  display: flex;
+  flex-direction: column;
+  margin-left: 47px;
+}
+
+.user-panel__tab {
+  display: inline-flex;
+  margin-bottom: 40px;
+  font-size: 22px;
+  line-height: 26px;
+  color: #838383;
+  cursor: pointer;
+}
+
+.user-panel__tab > svg {
+  margin-right: 15px;
+}
+
+.user-panel__tab_active {
+  color: #ff8f52;
+}
+
+.user-panel__tab_active > svg path {
+  fill: #ff8f52;
+}
+
+.user-panel__help {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+  margin-top: 135px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #838383;
+}
+
+.user-panel__help > svg {
+  margin: 0 15px 0 13px;
+}
+
+/* Content */
+
+.content {
+  width: 100%;
+}
+.content__title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #000000;
+}
+
+.content__box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 23px 75px 68px 63px;
+  border-top: 1px solid #f2f2f2;
+}
+
+.content__box_inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.content__top {
+  width: 100%;
+  padding: 27px 60px 24px 39px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content__submit {
+  padding: 9px 23px 10px 23px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  background: #ff8f52;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content__img-box {
+  display: flex;
+  flex-direction: column;
+  margin-right: 66px;
+}
+
+.content__upload {
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ff8f52;
+  cursor: pointer;
+}
+
+.content__img {
+  width: 131px;
+  height: 131px;
+  margin-bottom: 12px;
+}
+
+.input_upload {
+  cursor: pointer;
+}
+
+#input_upload {
+  display: none;
+}
+
+.content__labels {
+  display: grid;
+  grid-template-areas: 'tel tel tel email email email ' 'name name name gender gender gender' 'address address address address address address' 'state state city city code code';
+  grid-template-columns: repeat(1fr, 6);
+  grid-template-rows: repeat(1fr, 4);
+  row-gap: 13px;
+  column-gap: 20px;
+}
+
+.content__label-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__label {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.content__input {
+  width: 100%;
+  padding: 21px 20px 21px 29px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+}
+
+.content__label-box_tel {
+  grid-area: tel;
+}
+
+.content__label-box_email {
+  grid-area: email;
+}
+
+.content__label-box_name {
+  grid-area: name;
+}
+
+.content__label-box_gender {
+  position: relative;
+  grid-area: gender;
+}
+
+.content__label-box_gender::after {
+  cursor: text;
+  position: absolute;
+  bottom: 30%;
+  right: 10px;
+  content: '';
+  width: 16px;
+  height: 9px;
+  background-image: url('../../assets/img/Arrow.svg');
+  background-repeat: no-repeat;
+}
+
+.content__label-box_address {
+  grid-area: address;
+}
+
+.content__label-box_state {
+  grid-area: state;
+}
+
+.content__label-box_city {
+  grid-area: city;
+}
+
+.content__label-box__code {
+  grid-area: code;
+}
+
+/* Your orders */
+
+.content__progress-tabs {
+  display: flex;
+  margin-bottom: 58px;
+}
+
+.content__progress-tab {
+  margin-right: 20px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #838383;
+}
+
+.content__progress-tab_active {
+  font-size: 20px;
+  line-height: 23px;
+  color: #ff8f52;
+}
+
+.content__descr {
+  display: flex;
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.content__descr-item {
+  margin-right: 23px;
+}
+
+.content__descr-link {
+  font-size: 20px;
+  line-height: 23px;
+  color: #ff8f52;
+}
+
+.content__images {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 41px;
+}
+
+.content__images-item {
+  max-width: 146px;
+  width: 100%;
+  height: 146px;
+  object-fit: cover;
+}
