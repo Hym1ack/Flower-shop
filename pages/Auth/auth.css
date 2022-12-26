@@ -36,11 +36,14 @@ a {
 /* Общие стили */
 .auth {
   margin: 80px auto;
+
   max-width: 976px;
+  max-height: 673px;
   width: 100%;
   height: 100%;
-  max-height: 673px;
+
   display: flex;
+
   background-color: #ffffff;
 }
 
@@ -51,10 +54,11 @@ a {
 }
 
 .auth__heading {
+  margin-bottom: 16px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
 }
 
 .auth__title {
@@ -66,6 +70,7 @@ a {
 
 .auth__subtitle {
   margin-bottom: 50px;
+
   font-size: 18px;
   line-height: 21px;
   color: #838383;
@@ -80,6 +85,7 @@ a {
 .auth__home {
   margin-right: 5px;
   padding-top: 2px;
+
   width: 17px;
   height: 16px;
 }
@@ -88,6 +94,7 @@ a {
   width: 100%;
   margin-bottom: 14px;
   padding: 21px 20px 21px 29px;
+
   border: 1px solid #d9d9d9;
   border-radius: 5px;
 }
@@ -95,12 +102,14 @@ a {
 /* Логин */
 
 .auth__remember {
-  display: inline-block;
   margin-bottom: 66px;
+  display: inline-block;
+
   font-size: 18px;
   line-height: 21px;
   color: #838383;
 }
+
 /* Регистрация */
 
 .auth__policy {
@@ -119,17 +128,18 @@ a {
 .auth__checkbox {
   margin-right: 7px;
 }
+
 .auth__submit {
-  cursor: pointer;
+  margin-bottom: 75px;
   padding: 17px 158px;
-  color: #ffffff;
+
   background: #ff8f52;
   border-radius: 5px;
-  margin-bottom: 75px;
+
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
-
+  cursor: pointer;
   color: #ffffff;
 }
 
@@ -182,22 +192,28 @@ a {
 .custom_checkbox {
   position: relative;
   top: 2px;
+
   display: inline-block;
   width: 16px;
   height: 16px;
+
   background: #d9d9d9;
 }
 
 .custom_checkbox::before {
-  display: inline-block;
   content: '';
+
+  display: inline-block;
   width: 16px;
   height: 16px;
-  background-image: url('../../assets/img/accept.png');
-  background-size: contain;
+
   position: absolute;
   top: 50%;
   left: 50%;
+
+  background-image: url('../../assets/img/accept.png');
+  background-size: contain;
   transform: translate(-50%, -50%) scale(0);
+
   transition: 0.2s ease-in;
 }
