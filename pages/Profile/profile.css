@@ -440,29 +440,35 @@
   .content__submit {
     display: none;
   }
-  .user-panel__tabs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+  .user-panel {
+    padding: 21px 7px 25px 7px;
+  }
+  .user-panel__info {
+    margin: 0 auto 35px;
   }
   .user-panel__tab {
-    display: flex;
-    width: 100%;
     max-width: 184px;
     margin-bottom: 25px;
+
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .user-panel__tab svg {
+    margin-right: 10px;
   }
   .user-panel__help {
     justify-content: center;
     width: 100%;
     position: static;
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 20px;
   }
   .user-panel__help > svg {
     margin: 0;
     margin-right: 15px;
   }
+
   .content__title {
     width: 100%;
     text-align: center;
