@@ -33,15 +33,22 @@ a {
   color: #fff;
 }
 
+.container {
+  max-width: 1220px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
 /* Общие стили */
 .auth {
-  margin: 80px auto;
-
   max-width: 976px;
   max-height: 673px;
   width: 100%;
   height: 100%;
-
+  margin: 80px auto;
   display: flex;
 
   background-color: #ffffff;
@@ -121,6 +128,10 @@ a {
   color: #838383;
 }
 
+.auth__policy-links {
+  text-align: center;
+}
+
 .auth__policy-link {
   color: #ff8f52;
 }
@@ -154,6 +165,9 @@ a {
   max-width: 488px;
   width: 100%;
   height: 673px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
 }
 
 .auth__decor_login {
@@ -216,4 +230,53 @@ a {
   transform: translate(-50%, -50%) scale(0);
 
   transition: 0.2s ease-in;
+}
+
+/* adaptive */
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 991px) {
+  .auth {
+    max-width: 500px;
+    justify-content: center;
+  }
+  .auth__decor {
+    display: none;
+  }
+  .auth__submit {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+  .auth__container {
+    padding: 30px 10px 43px 10px;
+  }
+  .auth__back {
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+  }
+  .auth__home {
+    width: 30px;
+    height: 30px;
+    padding-top: 0;
+  }
+  .auth__policy {
+    margin-bottom: 20px;
+  }
+
+  .auth__submit {
+    width: 100%;
+
+    padding: 17px 0;
+  }
+  .auth__remember {
+    margin-bottom: 20px;
+  }
 }
