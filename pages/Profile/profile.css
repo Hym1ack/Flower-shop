@@ -354,6 +354,9 @@
   .content__upload {
     font-size: 23px;
   }
+  .content__img-box {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 768px) {
