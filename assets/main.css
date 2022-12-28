@@ -420,6 +420,10 @@ body {
     row-gap: 20px;
   }
 
+  .footer__content {
+    text-align: center;
+  }
+
   .footer__inner_logo {
     display: block;
     text-align: center;
@@ -438,6 +442,10 @@ body {
 
   .footer__contacts-title {
     margin: 0 auto 15px;
+  }
+
+  .footer__contacts {
+    align-items: center;
   }
 }
 
