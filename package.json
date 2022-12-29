@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "npx parcel index.html"
+  },
+  "devDependencies": {
+    "firebase": "^9.15.0",
+    "parcel": "^2.8.2"
+  }
+}
