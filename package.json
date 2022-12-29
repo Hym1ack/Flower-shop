@@ -1,4 +1,6 @@
 {
+  "name": "flowers-shop",
+  "version": "1.0",
   "scripts": {
     "start": "npx parcel index.html"
   },
