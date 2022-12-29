@@ -4,6 +4,7 @@
   },
   "devDependencies": {
     "firebase": "^9.15.0",
-    "parcel": "^2.8.2"
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
   }
 }
