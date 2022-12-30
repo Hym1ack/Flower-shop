@@ -4,5 +4,8 @@
     "plugin:import/recommended",
     "airbnb",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "import/prefer-default-export": "off"
+  }
 }
