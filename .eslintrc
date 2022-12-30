@@ -1,4 +1,8 @@
 {
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:import/recommended",
@@ -6,6 +10,16 @@
     "prettier"
   ],
   "rules": {
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off"
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "babelrc": false,
+      "configFile": false
+    }
   }
 }
