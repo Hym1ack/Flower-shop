@@ -34,10 +34,8 @@ class View {
     });
   }
 
-  showLoader(isLoading) {
-    if (isLoading) {
-      this._parent.innerHTML = `<img class="loader" src=${loader} alt="loading..." />`;
-    }
+  showLoader() {
+    this._parent.innerHTML = `<img class="loader" src=${loader} alt="loading..." />`;
   }
 
   showError() {
