@@ -1,312 +1,296 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Flower shop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/main.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <script defer type="module" src="./src/js/controller.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Flower shop</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="./assets/main.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<script defer type="module" src="./src/js/controller.js"></script>
+	</head>
 
-  </head>
+	<body>
+		<!-- HEADER -->
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="burger">
+						<input class="burger__toggle" id="burger__toggle" type="checkbox" />
+						<label class="burger__btn" for="burger__toggle">
+							<span></span>
+						</label>
+						<div class="burger__box">
+							<nav class="burger__menu">
+								<a class="burger__link" href="/">Home</a>
+								<a class="burger__link" href="./pages/Shop/shop.html">Shop</a>
+								<a class="burger__link" href="./pages/Blog/blog.html">Blog</a>
+								<a class="burger__link" href="./pages/About/about.html"
+									>About</a
+								>
+							</nav>
+						</div>
+					</div>
+					<a href="/" class="header-inner_logo logo">
+						Flower <span>Shop</span></a
+					>
+					<nav class="header__nav">
+						<a href="/" class="header-nav__link active">Home</a>
+						<a href="./pages/Shop/shop.html" class="header-nav__link">Shop</a>
+						<a href="./pages/Blog/blog.html" class="header-nav__link">Blog</a>
+						<a href="./pages/About/about.html" class="header-nav__link"
+							>About</a
+						>
+					</nav>
+					<div class="header__info">
+						<a class="header-info__link" href="./pages/Profile/profile.html"
+							><img
+								class="header-info__link-img"
+								src="./assets/img/header_profile.svg"
+								alt="header_profile"
+						/></a>
+						<a class="header-info__link" href="./pages/Cart/cart.html"
+							><img
+								class="header-info__link-img"
+								src="./assets/img/cart.svg"
+								alt="header_cart"
+						/></a>
+					</div>
+				</div>
+			</div>
+		</header>
 
-  <body>
-    <!-- HEADER -->
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="burger">
-            <input class="burger__toggle" id="burger__toggle" type="checkbox" />
-            <label class="burger__btn" for="burger__toggle">
-              <span></span>
-            </label>
-            <div class="burger__box">
-              <nav class="burger__menu">
-                <a class="burger__link" href="/">Home</a>
-                <a class="burger__link" href="./pages/Shop/shop.html">Shop</a>
-                <a class="burger__link" href="./pages/Blog/blog.html">Blog</a>
-                <a class="burger__link" href="./pages/About/about.html">About</a>
-              </nav>
-            </div>
-          </div>
-          <a href="/" class="header-inner_logo logo"> Flower <span>Shop</span></a>
-          <nav class="header__nav">
-            <a href="/" class="header-nav__link active">Home</a>
-            <a href="./pages/Shop/shop.html" class="header-nav__link">Shop</a>
-            <a href="./pages/Blog/blog.html" class="header-nav__link">Blog</a>
-            <a href="./pages/About/about.html" class="header-nav__link">About</a>
-          </nav>
-          <div class="header__info">
-            <a class="header-info__link" href="./pages/Profile/profile.html"
-              ><img
-                class="header-info__link-img"
-                src="./assets/img/header_profile.svg"
-                alt="header_profile"
-            /></a>
-            <a class="header-info__link" href="./pages/Cart/cart.html"
-              ><img class="header-info__link-img" src="./assets/img/cart.svg" alt="header_cart"
-            /></a>
-          </div>
-        </div>
-      </div>
-    </header>
+		<!-- Main -->
+		<main class="main">
+			<div class="container">
+				<section class="preview">
+					<div class="preview__box">
+						<h1 class="preview__title">
+							Flowers,
+							<img src="./assets/img/home/sunflower.svg" alt="sunflower" />
+							what the world needs
+						</h1>
+						<p class="preview__descr">Browse between hounders of flowers</p>
+						<a class="preview__link" href="#">Browse</a>
+					</div>
+					<div class="preview__images">
+						<img
+							class="preview__img"
+							src="https://firebasestorage.googleapis.com/v0/b/flowershop-88b42.appspot.com/o/mainHeading%2Fflower-1.png?alt=media&token=a0cfafd4-68e3-4931-b3b5-a0df11d611ff"
+							alt="flower" />
+						<img
+							class="preview__img"
+							src="https://firebasestorage.googleapis.com/v0/b/flowershop-88b42.appspot.com/o/mainHeading%2Fflower-2.png?alt=media&token=4b20f0dc-580f-4576-bea5-c66b2817f462"
+							alt="flower" />
+						<img
+							class="preview__img"
+							src="https://firebasestorage.googleapis.com/v0/b/flowershop-88b42.appspot.com/o/mainHeading%2Fflower-3.png?alt=media&token=c13216ce-32b1-441b-a2f1-10cb91efb05e"
+							alt="flower" />
+						<img
+							class="preview__img"
+							src="https://firebasestorage.googleapis.com/v0/b/flowershop-88b42.appspot.com/o/mainHeading%2Fflower-4.png?alt=media&token=3338007b-98e3-4ddb-8363-772169000844"
+							alt="flower" />
+						<img
+							class="preview__img"
+							src="https://firebasestorage.googleapis.com/v0/b/flowershop-88b42.appspot.com/o/mainHeading%2Fflower-5.png?alt=media&token=eac3c17b-bebb-469d-ac3d-c5ee55a9ee61"
+							alt="flower" />
+						<img
+							class="preview__img"
+							src="https://firebasestorage.googleapis.com/v0/b/flowershop-88b42.appspot.com/o/mainHeading%2Fflower-6.png?alt=media&token=56d5f405-4072-42d4-847c-8a938deb1259"
+							alt="flower" />
+					</div>
+				</section>
 
-    <!-- Main -->
-    <main class="main">
-      <div class="container">
-        <section class="preview">
-          <div class="preview__box">
-            <h1 class="preview__title">
-              Flowers,
-              <img src="./assets/img/home/sunflower.svg" alt="sunflower" />
-              what the world needs
-            </h1>
-            <p class="preview__descr">Browse between hounders of flowers</p>
-            <a class="preview__link" href="#">Browse</a>
-          </div>
-          <div class="preview__images">
-            <img class="preview__img" src="./assets/img/home/flower-1.png" alt="flower" />
-            <img class="preview__img" src="./assets/img/home/flower-2.png" alt="flower" />
-            <img class="preview__img" src="./assets/img/home/flower-3.png" alt="flower" />
-            <img class="preview__img" src="./assets/img/home/flower-4.png" alt="flower" />
-            <img class="preview__img" src="./assets/img/home/flower-5.png" alt="flower" />
-            <img class="preview__img" src="./assets/img/home/flower-6.png" alt="flower" />
-          </div>
-        </section>
+				<section class="best-selers">
+					<h3 class="title best-selers_heading">Best selers</h3>
+					<div class="products__cards best-sellers_products"></div>
+				</section>
 
-        <section class="best-selers">
-          <h3 class="title best-selers_heading">Best selers</h3>
-          <div class="products__cards best-sellers_products">
-          </div>
-        </section>
+				<section class="latest-posts">
+					<h3 class="title latest-posts_heading">Latest posts</h3>
+					<div class="post-cards"></div>
+				</section>
+				<section class="comments">
+					<h3 class="title comments_heading">Comments</h3>
+					<div class="comments__wrapper">
+						<div class="comment">
+							<div class="comment__user">
+								<img
+									class="comment__user-img"
+									src="./assets/img/users/user-1.png"
+									alt="user image" />
+								<h6 class="comment__user-name">Atena</h6>
+							</div>
 
-        <section class="latest-posts">
-          <h3 class="title latest-posts_heading">Latest posts</h3>
-          <div class="post-cards">
-            <div class="post-card">
-              <div class="post-card__top">
-                <figure class="post-card__author">
-                  <img
-                    class="post-card__author-picture"
-                    src="./assets/img/loader.svg"
-                    alt="user picture" />
-                  <figcaption class="post-card__author-name">Emily</figcaption>
-                </figure>
-                <time class="post-card__date">2022/22/8</time>
-              </div>
+							<div class="comment__review">
+								<p class="comment__user-text">
+									i'm buying flower from them every weak, always fresh flowers
+									and beutiful😍🌻... love'em so nuch..keep going 💯💯
+								</p>
+								<div class="comment__rating">
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star-gray.svg"
+										alt="☆" />
+								</div>
+							</div>
+						</div>
+						<div class="comment">
+							<div class="comment__user">
+								<img
+									class="comment__user-img"
+									src="./assets/img/users/user-2.png"
+									alt="user image" />
+								<h6 class="comment__user-name">pop Boy</h6>
+							</div>
 
-              <a class="post-card__img-box" href="#">
-                <img
-                  class="post-card__img"
-                  src="./assets/img/posts/post-1.png"
-                  alt="post picture" />
-              </a>
-              <div class="post-card__content">
-                <h5 class="post-card__headline">Best flowers for inside home</h5>
-                <p class="post-card__text">
-                  All the flowers are best for your lovly house just get the one you love the most
-                  😊
-                </p>
-              </div>
-              <div class="post-card__info">
-                <div class="post-card__counters">
-                  <p class="post-card__likes">15</p>
-                  <p class="post-card__viewed">2001</p>
-                </div>
-                <a class="post-card__link" href="#">Read more</a>
-              </div>
-            </div>
-            <div class="post-card">
-              <div class="post-card__top">
-                <figure class="post-card__author">
-                  <img
-                    class="post-card__author-picture"
-                    src="./assets/img/posts/userPic.png"
-                    alt="user picture" />
-                  <figcaption class="post-card__author-name">Emily</figcaption>
-                </figure>
-                <time class="post-card__date">2022/22/8</time>
-              </div>
-              <a class="post-card__img-box" href="#">
-                <img
-                  class="post-card__img"
-                  src="./assets/img/posts/post-2.png"
-                  alt="post picture" />
-              </a>
-              <div class="post-card__content">
-                <h5 class="post-card__headline">Best flowers for inside home</h5>
-                <p class="post-card__text">
-                  All the flowers are best for your lovly house just get the one you love the most
-                </p>
-              </div>
-              <div class="post-card__info">
-                <div class="post-card__counters">
-                  <p class="post-card__likes">15</p>
-                  <p class="post-card__viewed">2001</p>
-                </div>
-                <a class="post-card__link" href="#">Read more</a>
-              </div>
-            </div>
-            <div class="post-card">
-              <div class="post-card__top">
-                <figure class="post-card__author">
-                  <img
-                    class="post-card__author-picture"
-                    src="./assets/img/posts/userPic.png"
-                    alt="user picture" />
-                  <figcaption class="post-card__author-name">Emily</figcaption>
-                </figure>
-                <time class="post-card__date">2022/22/8</time>
-              </div>
-              <a class="post-card__img-box" href="#">
-                <img
-                  class="post-card__img"
-                  src="./assets/img/posts/post-3.png"
-                  alt="post picture" />
-              </a>
-              <div class="post-card__content">
-                <h5 class="post-card__headline">Best flowers for inside home</h5>
-                <p class="post-card__text">
-                  All the flowers are best for your lovly house just get the one you love the most
-                </p>
-              </div>
-              <div class="post-card__info">
-                <div class="post-card__counters">
-                  <p class="post-card__likes">15</p>
-                  <p class="post-card__viewed">2001</p>
-                </div>
-                <a class="post-card__link" href="#">Read more</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="comments">
-          <h3 class="title comments_heading">Comments</h3>
-          <div class="comments__wrapper">
-            <div class="comment">
-              <div class="comment__user">
-                <img
-                  class="comment__user-img"
-                  src="./assets/img/users/user-1.png"
-                  alt="user image" />
-                <h6 class="comment__user-name">Atena</h6>
-              </div>
+							<div class="comment__review">
+								<p class="comment__user-text">
+									i get flowers from them for my baby mama, she love them so
+									much 🔥💯
+								</p>
+								<div class="comment__rating">
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+								</div>
+							</div>
+						</div>
+						<div class="comment">
+							<div class="comment__user">
+								<img
+									class="comment__user-img"
+									src="./assets/img/users/user-3.png"
+									alt="user image" />
+								<h6 class="comment__user-name">Young Girl</h6>
+							</div>
 
-              <div class="comment__review">
-                <p class="comment__user-text">
-                  i'm buying flower from them every weak, always fresh flowers and beutiful😍🌻...
-                  love'em so nuch..keep going 💯💯
-                </p>
-                <div class="comment__rating">
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star-gray.svg" alt="☆" />
-                </div>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment__user">
-                <img
-                  class="comment__user-img"
-                  src="./assets/img/users/user-2.png"
-                  alt="user image" />
-                <h6 class="comment__user-name">pop Boy</h6>
-              </div>
+							<div class="comment__review">
+								<p class="comment__user-text">
+									Drip too hard, don't stand too close You gon' fuck around and
+									drown off this wave
+								</p>
+								<div class="comment__rating">
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+									<img
+										class="comment__rating-star"
+										src="./assets/img/star.svg"
+										alt="★" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
 
-              <div class="comment__review">
-                <p class="comment__user-text">
-                  i get flowers from them for my baby mama, she love them so much 🔥💯
-                </p>
-                <div class="comment__rating">
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                </div>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment__user">
-                <img
-                  class="comment__user-img"
-                  src="./assets/img/users/user-3.png"
-                  alt="user image" />
-                <h6 class="comment__user-name">Young Girl</h6>
-              </div>
-
-              <div class="comment__review">
-                <p class="comment__user-text">
-                  Drip too hard, don't stand too close You gon' fuck around and drown off this wave
-                </p>
-                <div class="comment__rating">
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                  <img class="comment__rating-star" src="./assets/img/star.svg" alt="★" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__info">
-            <a href="/" class="footer__inner_logo logo"> Flower <span>Shop</span></a>
-            <p class="footer__content">
-              Some random stuff about flower shop and some more info cuz this box had to get fill
-              Some random stuff about flower shop and some more info cuz this box had to get fill
-              Some random stuff about flower shop and some more info cuz this box had to get fill
-            </p>
-          </div>
-          <nav class="footer__nav">
-            <div class="footer__nav-links">
-              <h6 class="footer__nav-title">Links</h6>
-              <a href="/" class="footer__nav-link">Home</a>
-              <a href="/pages/Shop/shop.html" class="footer__nav-link">Shop</a>
-              <a href="/pages/Blog/blog.html" class="footer__nav-link">Blog</a>
-              <a href="/pages/About/about.html" class="footer__nav-link">About</a>
-            </div>
-            <div class="footer__nav-links">
-              <h6 class="footer__nav-title">Links</h6>
-              <a href="/" class="footer__nav-link">Home</a>
-              <a href="/pages/Shop/shop.html" class="footer__nav-link">Shop</a>
-              <a href="/pages/Blog/blog.html" class="footer__nav-link">Blog</a>
-              <a href="/pages/About/about.html" class="footer__nav-link">About</a>
-            </div>
-          </nav>
-          <nav class="footer__contacts">
-            <h6 class="footer__contacts-title">Contact</h6>
-            <a href="#" class="footer__contacts-link footer__contacts_address"
-              >26985 Brighton Lane, Lake Forest, CA</a
-            >
-            <a
-              href="mailto:support@Flowers.com"
-              class="footer__contacts-link footer__contacts_email"
-              >support@Flowers.com</a
-            >
-            <a href="tel:+12365489" class="footer__contacts-link footer__contacts_phone"
-              >+1 236 5489</a
-            >
-          </nav>
-        </div>
-      </div>
-    </footer>
-
-  </body>
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__info">
+						<a href="/" class="footer__inner_logo logo">
+							Flower <span>Shop</span></a
+						>
+						<p class="footer__content">
+							Some random stuff about flower shop and some more info cuz this
+							box had to get fill Some random stuff about flower shop and some
+							more info cuz this box had to get fill Some random stuff about
+							flower shop and some more info cuz this box had to get fill
+						</p>
+					</div>
+					<nav class="footer__nav">
+						<div class="footer__nav-links">
+							<h6 class="footer__nav-title">Links</h6>
+							<a href="/" class="footer__nav-link">Home</a>
+							<a href="/pages/Shop/shop.html" class="footer__nav-link">Shop</a>
+							<a href="/pages/Blog/blog.html" class="footer__nav-link">Blog</a>
+							<a href="/pages/About/about.html" class="footer__nav-link"
+								>About</a
+							>
+						</div>
+						<div class="footer__nav-links">
+							<h6 class="footer__nav-title">Links</h6>
+							<a href="/" class="footer__nav-link">Home</a>
+							<a href="/pages/Shop/shop.html" class="footer__nav-link">Shop</a>
+							<a href="/pages/Blog/blog.html" class="footer__nav-link">Blog</a>
+							<a href="/pages/About/about.html" class="footer__nav-link"
+								>About</a
+							>
+						</div>
+					</nav>
+					<nav class="footer__contacts">
+						<h6 class="footer__contacts-title">Contact</h6>
+						<a href="#" class="footer__contacts-link footer__contacts_address"
+							>26985 Brighton Lane, Lake Forest, CA</a
+						>
+						<a
+							href="mailto:support@Flowers.com"
+							class="footer__contacts-link footer__contacts_email"
+							>support@Flowers.com</a
+						>
+						<a
+							href="tel:+12365489"
+							class="footer__contacts-link footer__contacts_phone"
+							>+1 236 5489</a
+						>
+					</nav>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
