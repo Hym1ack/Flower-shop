@@ -1,20 +1,20 @@
-import View from "./view";
+import View from './view';
 
 class BestProductsView extends View {
-  _parent = document.querySelector(".best-sellers_products");
+	_parent = document.querySelector('.best-sellers_products');
 
-  _error = "Products is 404";
+	_error = 'Products is 404';
 
-  loadHandler(handler) {
-    if (!this._parent) return;
+	loadHandler(handler) {
+		if (!this._parent) return;
 
-    handler();
-  }
+		handler();
+	}
 
-  _createLayout() {
-    return this._data.map(
-      (product) =>
-        `<div class="product__card">
+	_createLayout() {
+		return this._data.map(
+			(product) =>
+				`<div class="product__card">
         <a href="./pages/Product/product.html" class="product__card-link">
             <img class="product__card-img" src=${product.photo} alt=${product.title}>
         </a>
@@ -24,8 +24,8 @@ class BestProductsView extends View {
           <button class="product__card-add">Add to cart</button>
         </div>
       </div>`
-    );
-  }
+		);
+	}
 }
 
 export default new BestProductsView();

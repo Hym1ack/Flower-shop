@@ -1,31 +1,59 @@
-import { query, where, limit, getDocs, collection } from "firebase/firestore";
-import { database } from "../firebase";
+import {
+	query,
+	// eslint-disable-next-line no-unused-vars
+	where,
+	// eslint-disable-next-line no-unused-vars
+	orderBy,
+	limit,
+	getDocs,
+	collection,
+} from 'firebase/firestore';
+
+import { database } from '../firebase';
 
 export const state = {};
 
-export const fetchProducts = async ({
-  fetchLimit = 20,
-  fieldPath,
-  opStr,
-  value,
+export const fetchItems = async ({
+	fetchLimit = 20,
+	fieldPath,
+	opStr,
+	value,
+	collectionType,
+	fieldSort,
+	directionStr,
 } = {}) => {
-  const isParams = fieldPath && opStr && value;
+	const isWhere = !!(fieldPath && opStr && value);
+	const isOrderBy = !!(fieldSort && directionStr);
 
-  const productsRef = collection(database, "products");
-  const productsQuery = query(
-    productsRef,
-    isParams && where(fieldPath, opStr, value),
-    limit(fetchLimit)
-  );
-  const querySnapshot = await getDocs(productsQuery);
+	const collectionRef = collection(database, collectionType);
 
-  const arrProducts = [];
+	const queryParams = () => {
+		if (isWhere) return `where(${fieldPath}, ${opStr}, ${value})`;
 
-  querySnapshot.forEach((doc) => {
-    arrProducts.push(doc.data());
-  });
+		if (isOrderBy) return `orderBy(${fieldSort}, ${directionStr})`;
 
-  return arrProducts;
+		if (isOrderBy && isWhere)
+			return `where(${fieldPath}, ${opStr}, ${value})
+      orderBy(${fieldSort}, ${directionStr})`;
+
+		return false;
+	};
+
+	const collectionQuery = query(
+		collectionRef,
+		queryParams(),
+		limit(fetchLimit)
+	);
+
+	const querySnapshot = await getDocs(collectionQuery);
+
+	const arrItems = [];
+
+	querySnapshot.forEach((doc) => {
+		arrItems.push(doc.data());
+	});
+
+	return arrItems;
 };
 
 // dev
