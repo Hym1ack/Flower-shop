@@ -2,8 +2,8 @@
   "name": "flowers-shop",
   "version": "1.0",
   "scripts": {
-    "start": "parcel src/**/*.html --open chrome",
-    "build": "parcel build src/**/*.html"
+    "start": "parcel src/index.html src/pages/*.html --open chrome",
+    "build": "parcel build src/index.html src/pages/*.html --no-optimize --public-url ./"
   },
   "browserslist": [
     "> 0.5%",

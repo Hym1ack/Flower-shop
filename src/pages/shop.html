@@ -12,55 +12,65 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet" />
-    <link rel="stylesheet" href="../../assets/main.css" />
-    <link rel="stylesheet" href="shop.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/shop.css" />
+    <script defer type="module" src="../index.js"></script>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="burger">
-            <input class="burger__toggle" id="burger__toggle" type="checkbox" />
-            <label class="burger__btn" for="burger__toggle">
-              <span></span>
-            </label>
-            <div class="burger__box">
-              <nav class="burger__menu">
-                <a class="burger__link" href="/">Home</a>
-                <a class="burger__link" href="../Shop/shop.html">Shop</a>
-                <a class="burger__link" href="../Blog/blog.html">Blog</a>
-                <a class="burger__link" href="../About/about.html">About</a>
-              </nav>
-            </div>
-          </div>
-          <a href="/" class="header-inner_logo logo"> Flower <span>Shop</span></a>
-          <nav class="header__nav">
-            <a href="/" class="header-nav__link">Home</a>
-            <a href="../Shop/shop.html" class="header-nav__link active">Shop</a>
-            <a href="../Blog/blog.html" class="header-nav__link">Blog</a>
-            <a href="../About/about.html" class="header-nav__link">About</a>
-          </nav>
-          <div class="header__info">
-            <a class="header-info__link" href="../Profile/profile.html"
-              ><img
-                class="header-info__link-img"
-                src="../../assets/img/header_profile.svg"
-                alt="header_profile"
-            /></a>
-            <a class="header-info__link" href="../Cart/cart.html"
-              ><img class="header-info__link-img" src="../../assets/img/cart.svg" alt="header_cart"
-            /></a>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="burger">
+          <input class="burger__toggle" id="burger__toggle" type="checkbox" />
+          <label class="burger__btn" for="burger__toggle">
+            <span></span>
+          </label>
+          <div class="burger__box">
+            <nav class="burger__menu">
+              <a class="burger__link" href="/">Home</a>
+              <a class="burger__link" href="./shop.html">Shop</a>
+              <a class="burger__link" href="./blog.html">Blog</a>
+              <a class="burger__link" href="./about.html"
+              >About</a
+              >
+            </nav>
           </div>
         </div>
+        <a href="/" class="header-inner_logo logo">
+          Flower <span>Shop</span>
+        </a>
+        <nav class="header__nav">
+          <a href="/" class="header-nav__link">Home</a>
+          <a href="./shop.html" class="header-nav__link active">Shop</a>
+          <a href="./blog.html" class="header-nav__link">Blog</a>
+          <a href="./about.html" class="header-nav__link"
+          >About</a
+          >
+        </nav>
+        <div class="header__info">
+          <a class="header-info__link" href="./profile.html"
+          ><img
+            class="header-info__link-img"
+            src="../assets/img/header_profile.svg"
+            alt="header_profile"
+          /></a>
+          <a class="header-info__link" href="./cart.html"
+          ><img
+            class="header-info__link-img"
+            src="../assets/img/cart.svg"
+            alt="header_cart"
+          /></a>
+        </div>
       </div>
-    </header>
+    </div>
+  </header>
 
     <main class="main">
       <div class="container">
         <div class="filter-block">
           <div class="filter">
             <button class="filter__btn">
-              <img class="filter__img" src="../../assets/img/filter.svg" alt="filter" />
+              <img class="filter__img" src="../assets/img/filter.svg" alt="filter" />
               <span class="filter__text">Filtering</span>
             </button>
           </div>
@@ -70,13 +80,13 @@
               <input class="search__input" type="text" placeholder="Search...." />
             </label>
             <button class="search__mobile">
-              <img src="../../assets/img/input-search.svg" alt="filter" />
+              <img src="../assets/img/input-search.svg" alt="filter" />
             </button>
           </div>
 
           <div class="sort">
             <button class="sort__btn">
-              <img class="sort__img" src="../../assets/img/arrow-down.svg" alt="arrow-down" />
+              <img class="sort__img" src="../assets/img/arrow-down.svg" alt="arrow-down" />
               <span class="sort__text">Cheep</span>
             </button>
           </div>
@@ -85,7 +95,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-1.svg"
+                src="../assets/img/flowers/flower-1.svg"
                 alt="flower-1"
                 class="product__card-img" />
             </a>
@@ -98,7 +108,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-2.svg"
+                src="../assets/img/flowers/flower-2.svg"
                 alt="flower-2"
                 class="product__card-img" />
             </a>
@@ -111,7 +121,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-3.svg"
+                src="../assets/img/flowers/flower-3.svg"
                 alt="flower-3"
                 class="product__card-img" />
             </a>
@@ -124,7 +134,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-4.svg"
+                src="../assets/img/flowers/flower-4.svg"
                 alt="flower-4"
                 class="product__card-img" />
             </a>
@@ -137,7 +147,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-1.svg"
+                src="../assets/img/flowers/flower-1.svg"
                 alt="flower-1"
                 class="product__card-img" />
             </a>
@@ -150,7 +160,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-2.svg"
+                src="../assets/img/flowers/flower-2.svg"
                 alt="flower-2"
                 class="product__card-img" />
             </a>
@@ -163,7 +173,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-3.svg"
+                src="../assets/img/flowers/flower-3.svg"
                 alt="flower-3"
                 class="product__card-img" />
             </a>
@@ -176,7 +186,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-4.svg"
+                src="../assets/img/flowers/flower-4.svg"
                 alt="flower-4"
                 class="product__card-img" />
             </a>
@@ -189,7 +199,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-1.svg"
+                src="../assets/img/flowers/flower-1.svg"
                 alt="flower-1"
                 class="product__card-img" />
             </a>
@@ -202,7 +212,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-2.svg"
+                src="../assets/img/flowers/flower-2.svg"
                 alt="flower-2"
                 class="product__card-img" />
             </a>
@@ -215,7 +225,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-3.svg"
+                src="../assets/img/flowers/flower-3.svg"
                 alt="flower-3"
                 class="product__card-img" />
             </a>
@@ -228,7 +238,7 @@
           <div class="product__card">
             <a href="#" class="product__card-link">
               <img
-                src="../../assets/img/flowers/flower-4.svg"
+                src="../assets/img/flowers/flower-4.svg"
                 alt="flower-4"
                 class="product__card-img" />
             </a>
@@ -246,47 +256,54 @@
       <div class="container">
         <div class="footer__inner">
           <div class="footer__info">
-            <a href="/" class="footer__inner_logo logo"> Flower <span>Shop</span></a>
+            <a href="/" class="footer__inner_logo logo">
+              Flower <span>Shop</span></a
+            >
             <p class="footer__content">
-              Some random stuff about flower shop and some more info cuz this box had to get fill
-              Some random stuff about flower shop and some more info cuz this box had to get fill
-              Some random stuff about flower shop and some more info cuz this box had to get fill
+              Some random stuff about flower shop and some more info cuz this
+              box had to get fill Some random stuff about flower shop and some
+              more info cuz this box had to get fill Some random stuff about
+              flower shop and some more info cuz this box had to get fill
             </p>
           </div>
           <nav class="footer__nav">
             <div class="footer__nav-links">
               <h6 class="footer__nav-title">Links</h6>
               <a href="/" class="footer__nav-link">Home</a>
-              <a href="../Shop/shop.html" class="footer__nav-link">Shop</a>
-              <a href="../Blog/blog.html" class="footer__nav-link">Blog</a>
-              <a href="../About/about.html" class="footer__nav-link">About</a>
+              <a href="./shop.html" class="footer__nav-link">Shop</a>
+              <a href="./blog.html" class="footer__nav-link">Blog</a>
+              <a href="./about.html" class="footer__nav-link"
+              >About</a
+              >
             </div>
             <div class="footer__nav-links">
               <h6 class="footer__nav-title">Links</h6>
               <a href="/" class="footer__nav-link">Home</a>
-              <a href="../Shop/shop.html" class="footer__nav-link">Shop</a>
-              <a href="../Blog/blog.html" class="footer__nav-link">Blog</a>
-              <a href="../About/about.html" class="footer__nav-link">About</a>
+              <a href="./shop.html" class="footer__nav-link">Shop</a>
+              <a href="./blog.html" class="footer__nav-link">Blog</a>
+              <a href="./about.html" class="footer__nav-link"
+              >About</a
+              >
             </div>
           </nav>
           <nav class="footer__contacts">
             <h6 class="footer__contacts-title">Contact</h6>
             <a href="#" class="footer__contacts-link footer__contacts_address"
-              >26985 Brighton Lane, Lake Forest, CA</a
+            >26985 Brighton Lane, Lake Forest, CA</a
             >
             <a
               href="mailto:support@Flowers.com"
               class="footer__contacts-link footer__contacts_email"
-              >support@Flowers.com</a
+            >support@Flowers.com</a
             >
-            <a href="tel:+12365489" class="footer__contacts-link footer__contacts_phone"
-              >+1 236 5489</a
+            <a
+              href="tel:+12365489"
+              class="footer__contacts-link footer__contacts_phone"
+            >+1 236 5489</a
             >
           </nav>
         </div>
       </div>
     </footer>
-
-    <script type="module" src="../../js/controller.js"></script>
   </body>
 </html>

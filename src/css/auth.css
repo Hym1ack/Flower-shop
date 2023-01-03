@@ -171,11 +171,11 @@ a {
 }
 
 .auth__decor_login {
-  background-image: url('../../assets/img/auth-decore-log.png');
+  background-image: url('../assets/img/auth-decore-log.png');
 }
 
 .auth__decor_reg {
-  background-image: url('../../assets/img/auth-decore.png');
+  background-image: url('../assets/img/auth-decore.png');
 }
 
 .auth__link {
@@ -225,7 +225,7 @@ a {
   top: 50%;
   left: 50%;
 
-  background-image: url('../../assets/img/accept.png');
+  background-image: url('../assets/img/accept.png');
   background-size: contain;
   transform: translate(-50%, -50%) scale(0);
 
