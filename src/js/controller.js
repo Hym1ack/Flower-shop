@@ -56,10 +56,8 @@ const latestCommentsController = async () => {
 	}
 };
 
-const init = () => {
+export const init = () => {
 	bestProductsView.loadHandler(bestSellersController);
 	postsView.loadHandler(latestPostsController);
 	LastCommentsView.loadHandler(latestCommentsController);
 };
-
-init();

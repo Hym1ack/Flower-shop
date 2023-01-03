@@ -158,10 +158,10 @@
   height: 19px;
 
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
 
-  background-image: url('./assets/img/cart.svg');
+  background-image: url('../assets/img/cart.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -285,13 +285,13 @@
 }
 
 .post-card__likes:before {
-  background-image: url('./assets/img/posts/like.svg');
+  background-image: url('../assets/img/posts/like.svg');
   width: 14px;
   height: 12px;
 }
 
 .post-card__viewed:before {
-  background-image: url('./assets/img/posts/viewed.svg');
+  background-image: url('../assets/img/posts/viewed.svg');
   width: 15px;
   height: 12px;
 }

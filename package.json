@@ -2,8 +2,14 @@
   "name": "flowers-shop",
   "version": "1.0",
   "scripts": {
-    "start": "npx parcel index.html --open chrome"
+    "start": "parcel src/index.html src/pages/*.html --open chrome",
+    "build": "parcel build src/index.html src/pages/*.html --no-optimize --public-url ./"
   },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
   "devDependencies": {
     "@babel/core": "^7.20.7",
     "@babel/eslint-parser": "^7.19.1",
