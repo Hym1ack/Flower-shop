@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/main.css" />
-    <link rel="stylesheet" href="./shop.css" />
+    <link rel="stylesheet" href="shop.css" />
   </head>
   <body>
     <header class="header">
@@ -61,12 +61,14 @@
           <div class="filter">
             <button class="filter__btn">
               <img class="filter__img" src="../../assets/img/filter.svg" alt="filter" />
-              <p class="filter__text">Filtering</p>
+              <span class="filter__text">Filtering</span>
             </button>
           </div>
 
           <div class="search">
-            <input class="search__input" type="text" placeholder="Search...." />
+            <label>
+              <input class="search__input" type="text" placeholder="Search...." />
+            </label>
             <button class="search__mobile">
               <img src="../../assets/img/input-search.svg" alt="filter" />
             </button>
@@ -75,7 +77,7 @@
           <div class="sort">
             <button class="sort__btn">
               <img class="sort__img" src="../../assets/img/arrow-down.svg" alt="arrow-down" />
-              <p class="sort__text">Cheep</p>
+              <span class="sort__text">Cheep</span>
             </button>
           </div>
         </div>
@@ -255,16 +257,16 @@
             <div class="footer__nav-links">
               <h6 class="footer__nav-title">Links</h6>
               <a href="/" class="footer__nav-link">Home</a>
-              <a href="/pages/Shop/shop.html" class="footer__nav-link">Shop</a>
-              <a href="/pages/Blog/blog.html" class="footer__nav-link">Blog</a>
-              <a href="/pages/About/about.html" class="footer__nav-link">About</a>
+              <a href="../Shop/shop.html" class="footer__nav-link">Shop</a>
+              <a href="../Blog/blog.html" class="footer__nav-link">Blog</a>
+              <a href="../About/about.html" class="footer__nav-link">About</a>
             </div>
             <div class="footer__nav-links">
               <h6 class="footer__nav-title">Links</h6>
               <a href="/" class="footer__nav-link">Home</a>
-              <a href="/pages/Shop/shop.html" class="footer__nav-link">Shop</a>
-              <a href="/pages/Blog/blog.html" class="footer__nav-link">Blog</a>
-              <a href="/pages/About/about.html" class="footer__nav-link">About</a>
+              <a href="../Shop/shop.html" class="footer__nav-link">Shop</a>
+              <a href="../Blog/blog.html" class="footer__nav-link">Blog</a>
+              <a href="../About/about.html" class="footer__nav-link">About</a>
             </div>
           </nav>
           <nav class="footer__contacts">
@@ -285,6 +287,6 @@
       </div>
     </footer>
 
-    <script type="module" src="../../src/js/controller.js"></script>
+    <script type="module" src="../../js/controller.js"></script>
   </body>
 </html>

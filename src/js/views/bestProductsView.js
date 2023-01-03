@@ -15,7 +15,7 @@ class BestProductsView extends View {
 		return this._data.map(
 			(product) =>
 				`<div class="product__card">
-        <a href="/pages/Product/product.html" class="product__card-link">
+        <a href="./pages/Product/product.html" class="product__card-link">
             <img class="product__card-img" src=${product.photo} alt=${product.title}>
         </a>
         <h5 class="product__card-title">${product.title}</h5>

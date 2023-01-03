@@ -240,21 +240,21 @@ body {
   width: 13px;
   height: 18px;
 
-  background-image: url('./img/location.svg');
+  background-image: url('img/location.svg');
 }
 
 .footer__contacts_email:before {
   width: 17px;
   height: 17px;
 
-  background-image: url('./img/email.svg');
+  background-image: url('img/email.svg');
 }
 
 .footer__contacts_phone:before {
   width: 18px;
   height: 18px;
 
-  background-image: url('./img/phone.svg');
+  background-image: url('img/phone.svg');
 }
 
 /* burger menu  */
