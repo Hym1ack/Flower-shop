@@ -1,6 +1,7 @@
 import * as model from './model';
 import bestProductsView from './views/bestProductsView';
 import postsView from './views/postsView';
+import LastCommentsView from './views/lastCommentsView';
 
 const bestSellersController = async () => {
 	try {
@@ -38,9 +39,27 @@ const latestPostsController = async () => {
 	}
 };
 
+const latestCommentsController = async () => {
+	try {
+		LastCommentsView.showLoader();
+
+		const comments = await model.fetchItems({
+			fetchLimit: 3,
+			collectionType: 'comments',
+			fieldSort: 'date',
+			directionStr: 'desc',
+		});
+
+		LastCommentsView.render(comments);
+	} catch (error) {
+		LastCommentsView.showError();
+	}
+};
+
 const init = () => {
 	bestProductsView.loadHandler(bestSellersController);
 	postsView.loadHandler(latestPostsController);
+	LastCommentsView.loadHandler(latestCommentsController);
 };
 
 init();
