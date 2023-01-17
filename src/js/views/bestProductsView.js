@@ -1,11 +1,11 @@
 import View from './view';
 
 class BestProductsView extends View {
-	_parent = document.querySelector('.best-sellers_products');
-
 	_error = 'Products is 404';
 
 	loadHandler(handler) {
+		this._parent = document.querySelector('.best-sellers_products');
+
 		if (!this._parent) return;
 
 		handler();

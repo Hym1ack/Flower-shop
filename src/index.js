@@ -1,3 +1,4 @@
-import { init } from './js/controller';
+import './css/index.css';
+import './js/routing';
 
-init();
+import './js/controller';

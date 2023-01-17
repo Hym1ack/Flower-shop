@@ -1,20 +1,20 @@
-import View from './view'
-import { formatDate } from '../helpers'
+import View from './view';
+import { formatDate } from '../helpers';
 
 class PostsView extends View {
-  _parent = document.querySelector('.post-cards')
+	_error = 'Posts is 404';
 
-  _error = 'Posts is 404'
+	loadHandler(handler) {
+		this._parent = document.querySelector('.post-cards');
 
-  loadHandler(handler) {
-    if (!this._parent) return
+		if (!this._parent) return;
 
-    handler()
-  }
+		handler();
+	}
 
-  _createLayout() {
-    return this._data.map(
-      (post) => `
+	_createLayout() {
+		return this._data.map(
+			(post) => `
         <div class="post-card">
         <div class="post-card__top">
           <figure class="post-card__author">
@@ -22,7 +22,9 @@ class PostsView extends View {
               class="post-card__author-picture"
               src="${post.authorPicture}"
               alt="user picture" />
-            <figcaption class="post-card__author-name">${post.authorName}</figcaption>
+            <figcaption class="post-card__author-name">${
+							post.authorName
+						}</figcaption>
           </figure>
           <time class="post-card__date">${formatDate(post.date.seconds)}</time>
         </div>
@@ -47,9 +49,9 @@ class PostsView extends View {
           <a class="post-card__link" href="#">Read more</a>
         </div>
       </div>
-        `,
-    )
-  }
+        `
+		);
+	}
 }
 
-export default new PostsView()
+export default new PostsView();

@@ -1,73 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Shop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/product.css" />
-    <script defer type="module" src="../index.js"></script>
-  </head>
-  <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <div class="burger">
-          <input class="burger__toggle" id="burger__toggle" type="checkbox" />
-          <label class="burger__btn" for="burger__toggle">
-            <span></span>
-          </label>
-          <div class="burger__box">
-            <nav class="burger__menu">
-              <a class="burger__link" href="/">Home</a>
-              <a class="burger__link" href="./shop.html">Shop</a>
-              <a class="burger__link" href="./blog.html">Blog</a>
-              <a class="burger__link" href="./about.html"
-              >About</a
-              >
-            </nav>
-          </div>
-        </div>
-        <a href="/" class="header-inner_logo logo">
-          Flower <span>Shop</span></a
-        >
-        <nav class="header__nav">
-          <a href="/" class="header-nav__link ">Home</a>
-          <a href="./shop.html" class="header-nav__link active">Shop</a>
-          <a href="./blog.html" class="header-nav__link">Blog</a>
-          <a href="./about.html" class="header-nav__link"
-          >About</a
-          >
-        </nav>
-        <div class="header__info">
-          <a class="header-info__link" href="./profile.html"
-          ><img
-            class="header-info__link-img"
-            src="../assets/img/header_profile.svg"
-            alt="header_profile"
-          /></a>
-          <a class="header-info__link" href="./cart.html"
-          ><img
-            class="header-info__link-img"
-            src="../assets/img/cart.svg"
-            alt="header_cart"
-          /></a>
-        </div>
-      </div>
-    </div>
-  </header>
+import PageView from './pageView';
 
-    <main class="main">
-      <div class="container">
-        <div class="product">
+class ProductPageView extends PageView {
+	_createLayout() {
+		return `<div class="product">
           <div class="product__image-box">
             <img
               class="product__image"
@@ -199,61 +134,8 @@
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </main>
+        </div>`;
+	}
+}
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__info">
-            <a href="/" class="footer__inner_logo logo">
-              Flower <span>Shop</span></a
-            >
-            <p class="footer__content">
-              Some random stuff about flower shop and some more info cuz this
-              box had to get fill Some random stuff about flower shop and some
-              more info cuz this box had to get fill Some random stuff about
-              flower shop and some more info cuz this box had to get fill
-            </p>
-          </div>
-          <nav class="footer__nav">
-            <div class="footer__nav-links">
-              <h6 class="footer__nav-title">Links</h6>
-              <a href="/" class="footer__nav-link">Home</a>
-              <a href="./shop.html" class="footer__nav-link">Shop</a>
-              <a href="./blog.html" class="footer__nav-link">Blog</a>
-              <a href="./about.html" class="footer__nav-link"
-              >About</a
-              >
-            </div>
-            <div class="footer__nav-links">
-              <h6 class="footer__nav-title">Links</h6>
-              <a href="/" class="footer__nav-link">Home</a>
-              <a href="./shop.html" class="footer__nav-link">Shop</a>
-              <a href="./blog.html" class="footer__nav-link">Blog</a>
-              <a href="./about.html" class="footer__nav-link"
-              >About</a>
-            </div>
-          </nav>
-          <nav class="footer__contacts">
-            <h6 class="footer__contacts-title">Contact</h6>
-            <a href="#" class="footer__contacts-link footer__contacts_address"
-            >26985 Brighton Lane, Lake Forest, CA</a
-            >
-            <a
-              href="mailto:support@Flowers.com"
-              class="footer__contacts-link footer__contacts_email"
-            >support@Flowers.com</a
-            >
-            <a
-              href="tel:+12365489"
-              class="footer__contacts-link footer__contacts_phone"
-            >+1 236 5489</a
-            >
-          </nav>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+export default new ProductPageView();
