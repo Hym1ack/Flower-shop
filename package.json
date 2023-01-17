@@ -3,7 +3,7 @@
   "version": "1.0",
   "scripts": {
     "start": "parcel src/index.html --open chrome",
-    "build": "parcel build src/index.html --no-optimize --public-url ./"
+    "build": "parcel build src/index.html --no-optimize --public-url ./  --dist-dir prod"
   },
   "browserslist": [
     "> 0.5%",

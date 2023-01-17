@@ -23,7 +23,7 @@ const routes = {
 };
 
 const initRoutes = () => {
-	const loadPage = () => routes[window.location.pathname];
+	const loadPage = routes[window.location.pathname];
 
 	loadPage();
 
