@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/auth.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="auth">
+import PageView from './pageView';
+
+class RegisterPageView extends PageView {
+	_createLayout() {
+		return ` <div class="auth">
         <div class="auth__container">
           <div class="auth__heading">
             <h3 class="auth__title">Register</h3>
@@ -48,8 +35,8 @@
           </p>
         </div>
         <div class="auth__decor auth__decor_reg"></div>
-      </div>
-    </div>
-    <script type="module" src="../js/controller.js"></script>
-  </body>
-</html>
+      </div>`;
+	}
+}
+
+export default new RegisterPageView();

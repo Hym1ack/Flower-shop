@@ -2,11 +2,11 @@ import View from './view';
 import { formatStars } from '../helpers';
 
 class LastCommentsView extends View {
-	_parent = document.querySelector('.comments__wrapper');
-
 	_error = 'Comments is 404';
 
 	loadHandler(handler) {
+		this._parent = document.querySelector('.comments__wrapper');
+
 		if (!this._parent) return;
 
 		handler();
