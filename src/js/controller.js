@@ -4,7 +4,7 @@ import postsView from './views/postsView';
 import LastCommentsView from './views/lastCommentsView';
 import productsView from './views/productsView';
 
-const bestSellersController = async () => {
+export const bestSellersController = async () => {
 	try {
 		bestProductsView.showLoader();
 
@@ -16,7 +16,7 @@ const bestSellersController = async () => {
 	}
 };
 
-const latestPostsController = async () => {
+export const latestPostsController = async () => {
 	try {
 		postsView.showLoader();
 		const posts = await model.fetchPosts();
@@ -27,7 +27,7 @@ const latestPostsController = async () => {
 	}
 };
 
-const latestCommentsController = async () => {
+export const latestCommentsController = async () => {
 	try {
 		LastCommentsView.showLoader();
 
@@ -39,7 +39,7 @@ const latestCommentsController = async () => {
 	}
 };
 
-const productsConroller = async () => {
+export const productsConroller = async () => {
 	try {
 		const { products } = model.state.catalog;
 		productsView.showLoader();
@@ -53,11 +53,4 @@ const productsConroller = async () => {
 	} catch (error) {
 		productsView.showError();
 	}
-};
-
-export const init = () => {
-	bestProductsView.loadHandler(bestSellersController);
-	postsView.loadHandler(latestPostsController);
-	LastCommentsView.loadHandler(latestCommentsController);
-	productsView.loadHandler(productsConroller);
 };
