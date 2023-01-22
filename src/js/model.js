@@ -11,49 +11,60 @@ import {
 
 import { database } from './firebase';
 
-export const state = {};
+export const state = {
+	catalog: {
+		products: [],
+	},
+};
 
-export const fetchItems = async ({
-	fetchLimit = 20,
-	fieldPath,
-	opStr,
-	value,
-	collectionType,
-	fieldSort,
-	directionStr,
-} = {}) => {
-	const isWhere = !!(fieldPath && opStr && value);
-	const isOrderBy = !!(fieldSort && directionStr);
+const createQueryWithLimit = (collectionRef, queryLimit = 4) =>
+	query(collectionRef, limit(queryLimit));
 
-	const collectionRef = collection(database, collectionType);
+const createQueryWithRating = (collectionRef, queryLimit = 4) =>
+	query(collectionRef, where('rating', '>=', 4.91), limit(queryLimit));
 
-	const queryParams = () => {
-		if (isWhere) return `where(${fieldPath}, ${opStr}, ${value})`;
-
-		if (isOrderBy) return `orderBy(${fieldSort}, ${directionStr})`;
-
-		if (isOrderBy && isWhere)
-			return `where(${fieldPath}, ${opStr}, ${value})
-      orderBy(${fieldSort}, ${directionStr})`;
-
-		return false;
-	};
-
-	const collectionQuery = query(
-		collectionRef,
-		queryParams(),
-		limit(fetchLimit)
-	);
-
+const fetchItems = async (collectionQuery) => {
 	const querySnapshot = await getDocs(collectionQuery);
 
-	const arrItems = [];
+	const arr = [];
 
 	querySnapshot.forEach((doc) => {
-		arrItems.push(doc.data());
+		arr.push(doc.data());
 	});
 
-	return arrItems;
+	return arr;
+};
+
+export const fetchProducts = async (isLimit, queryLimit) => {
+	const collectionRef = collection(database, 'products');
+
+	const collectionQuery = isLimit
+		? createQueryWithLimit(collectionRef, queryLimit)
+		: createQueryWithRating(collectionRef, queryLimit);
+
+	const items = fetchItems(collectionQuery);
+
+	return items;
+};
+
+export const fetchComments = async () => {
+	const collectionRef = collection(database, 'comments');
+
+	const collectionQuery = createQueryWithLimit(collectionRef, 3);
+
+	return fetchItems(collectionQuery);
+};
+
+export const fetchPosts = async () => {
+	const collectionRef = collection(database, 'posts');
+
+	const collectionQuery = createQueryWithLimit(collectionRef, 3);
+
+	return fetchItems(collectionQuery);
+};
+
+export const setProductsToState = (products) => {
+	state.catalog.products.push(...products);
 };
 
 // dev
