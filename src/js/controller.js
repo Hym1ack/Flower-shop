@@ -2,7 +2,6 @@ import * as model from './model';
 import bestProductsView from './views/bestProductsView';
 import postsView from './views/postsView';
 import LastCommentsView from './views/lastCommentsView';
-import productsView from './views/productsView';
 
 export const bestSellersController = async () => {
 	try {
@@ -36,21 +35,5 @@ export const latestCommentsController = async () => {
 		LastCommentsView.render(comments);
 	} catch (error) {
 		LastCommentsView.showError();
-	}
-};
-
-export const productsConroller = async () => {
-	try {
-		const { products } = model.state.catalog;
-		productsView.showLoader();
-
-		if (products.length === 0) {
-			const response = await model.fetchProducts(true, 20);
-			model.setProductsToState(response);
-		}
-
-		productsView.render(products);
-	} catch (error) {
-		productsView.showError();
 	}
 };
