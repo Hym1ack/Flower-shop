@@ -2,7 +2,7 @@ import { getDocs, collection, getCountFromServer } from 'firebase/firestore';
 
 import { database } from './firebase';
 
-import { PRODUCTS_PER_PAGE } from './constants';
+import { PRODUCTS_PER_PAGE } from './utils/constants';
 
 import {
 	createQueryWithLimit,
@@ -10,6 +10,7 @@ import {
 	createQueryByFilter,
 	createQueryPagination,
 } from './queryCreators';
+import { setURLParams } from './utils/helpers';
 
 export const state = {
 	catalog: {
@@ -20,6 +21,32 @@ export const state = {
 			pagesCount: 0,
 		},
 	},
+};
+
+export const clearProductsInState = () => {
+	state.catalog.products.length = 0;
+};
+
+export const setProductsToState = (products) => {
+	state.catalog.products.push(...products);
+};
+
+export const setSortType = (type) => {
+	setURLParams({ name: 'sort', value: type });
+
+	state.catalog.sortBy.filterSort = type;
+};
+
+export const setPriceType = (type) => {
+	setURLParams({ name: 'price', value: type });
+
+	state.catalog.sortBy.priceSort = type;
+};
+
+export const setCurrPage = (page) => {
+	setURLParams({ name: 'page', value: page });
+
+	state.catalog.pagination.currPage = page;
 };
 
 const fetchItems = async (collectionQuery) => {
@@ -34,10 +61,7 @@ const fetchItems = async (collectionQuery) => {
 	return arr;
 };
 
-export const fetchProducts = async (
-	isLimit,
-	queryLimit = PRODUCTS_PER_PAGE
-) => {
+export const fetchProducts = async (isLimit, queryLimit = PRODUCTS_PER_PAGE) => {
 	const collectionRef = collection(database, 'products');
 
 	const collectionQuery = isLimit
@@ -50,10 +74,12 @@ export const fetchProducts = async (
 export const fetchPagination = async () => {
 	const collectionRef = collection(database, 'products');
 
-	const collectionQuery = createQueryPagination(
-		collectionRef,
-		state.catalog.pagination.currPage
-	);
+	const { pagination, sortBy } = state.catalog;
+
+	const collectionQuery = createQueryPagination(collectionRef, {
+		...pagination,
+		...sortBy,
+	});
 
 	return fetchItems(collectionQuery);
 };
@@ -74,18 +100,6 @@ export const fetchPosts = async () => {
 	return fetchItems(collectionQuery);
 };
 
-export const clearProductsInState = () => {
-	state.catalog.products.length = 0;
-};
-
-export const setProductsToState = (products) => {
-	state.catalog.products.push(...products);
-};
-
-export const setSortType = (type) => {
-	state.catalog.sortBy.filterSort = type;
-};
-
 export const fetchFilteredProducts = async () => {
 	const collectionRef = collection(database, 'products');
 
@@ -94,25 +108,17 @@ export const fetchFilteredProducts = async () => {
 		state.catalog.sortBy.filterSort
 	);
 
-	const items = await fetchItems(collectionQuery);
-
-	return items;
+	return fetchItems(collectionQuery);
 };
 
-const getLastPage = async () => {
+(async () => {
 	const collectionRef = collection(database, 'products');
 	const productsLength = await getCountFromServer(collectionRef);
 
 	state.catalog.pagination.pagesCount = Math.ceil(
 		productsLength.data().count / PRODUCTS_PER_PAGE
 	);
-};
-
-export const setCurrPage = (page) => {
-	state.catalog.pagination.currPage = page;
-};
-
-getLastPage();
+})();
 
 // dev
 window.state = state;
