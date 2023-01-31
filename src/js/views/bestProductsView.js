@@ -3,9 +3,9 @@ import View from './view';
 class BestProductsView extends View {
 	_error = 'Products is 404';
 
-	loadHandler(handler) {
-		this._parent = document.querySelector('.best-sellers_products');
+	_parent = document.querySelector('.best-sellers_products');
 
+	loadHandler(handler) {
 		if (!this._parent) return;
 
 		handler();
@@ -28,4 +28,4 @@ class BestProductsView extends View {
 	}
 }
 
-export default new BestProductsView();
+export default BestProductsView;

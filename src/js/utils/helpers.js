@@ -30,3 +30,18 @@ export const formatStars = (stars) => {
 
 	return outStars;
 };
+
+export const setURLParams = ({ name, value }) => {
+	const href =
+		window.location.origin + window.location.pathname + window.location.search;
+
+	const url = new URL(href);
+
+	if (url.searchParams.has(name)) {
+		url.searchParams.set(name, value);
+	} else {
+		url.searchParams.append(name, value);
+	}
+
+	window.history.pushState({}, url.search, url.search);
+};

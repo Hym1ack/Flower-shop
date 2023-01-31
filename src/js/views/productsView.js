@@ -3,15 +3,15 @@ import View from './view';
 class ProductsView extends View {
 	_error = 'Products is 404';
 
-	#menu;
+	#menu = document.querySelector('.filter-menu');
 
-	#filterBtn;
+	#filterBtn = document.querySelector('.filter__btn');
 
-	#toogleBtn;
+	#toggleBtnSort = document.querySelector('.sort');
+
+	_parent = document.querySelector('.shop__cards');
 
 	loadHandler(handler) {
-		this._parent = document.querySelector('.shop__cards');
-
 		if (!this._parent) return;
 
 		handler();
@@ -37,25 +37,23 @@ class ProductsView extends View {
 	}
 
 	togglePriceHandler() {
-		this.#toogleBtn = document.querySelector('.sort');
-
-		this.#toogleBtn.addEventListener('click', () => {
-			const sortType = this.#toogleBtn.getAttribute('data-price');
-			const sortImg = this.#toogleBtn.querySelector('.sort__img');
+		this.#toggleBtnSort.addEventListener('click', () => {
+			const sortImg = this.#toggleBtnSort.querySelector('.sort__img');
+			const sortType = this.#toggleBtnSort.getAttribute('data-price');
 
 			if (sortType === 'asc') {
-				this.#toogleBtn.setAttribute('data-price', 'desc');
+				this.#toggleBtnSort.setAttribute('data-price', 'desc');
 				sortImg.classList.remove('sort__img_asc');
 				sortImg.classList.add('sort__img_desc');
 			}
 
 			if (sortType === 'desc') {
-				this.#toogleBtn.setAttribute('data-price', '');
+				this.#toggleBtnSort.setAttribute('data-price', '');
 				sortImg.classList.remove('sort__img_desc');
 			}
 
 			if (sortType === '') {
-				this.#toogleBtn.setAttribute('data-price', 'asc');
+				this.#toggleBtnSort.setAttribute('data-price', 'asc');
 				sortImg.classList.add('sort__img_asc');
 			}
 		});
@@ -79,11 +77,6 @@ class ProductsView extends View {
 	}
 
 	toggleFilterMenu() {
-		this.#menu = document.querySelector('.filter-menu');
-		this.#filterBtn = document.querySelector('.filter__btn');
-
-		if (!this.#filterBtn) return;
-
 		this.#filterBtn.addEventListener('click', () => {
 			this.#menu.classList.toggle('filter-menu_open');
 		});
@@ -96,8 +89,7 @@ class ProductsView extends View {
 			const clickInside = e.composedPath();
 
 			const clickOutside =
-				!clickInside.includes(this.#menu) &&
-				!clickInside.includes(this.#filterBtn);
+				!clickInside.includes(this.#menu) && !clickInside.includes(this.#filterBtn);
 
 			if (clickOutside) {
 				this.#menu.classList.remove('filter-menu_open');
@@ -112,4 +104,4 @@ class ProductsView extends View {
 	}
 }
 
-export default new ProductsView();
+export default ProductsView;

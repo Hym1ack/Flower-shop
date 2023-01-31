@@ -1,7 +1,15 @@
 import * as model from '../model';
 import shopPageView from '../../pages/shopPageView';
-import productsView from '../views/productsView';
-import paginationView from '../views/paginationView';
+import ProductsView from '../views/productsView';
+import PaginationView from '../views/paginationView';
+
+let productsView;
+let paginationView;
+
+export const initializeViews = () => {
+	paginationView = new PaginationView();
+	productsView = new ProductsView();
+};
 
 const productsController = async () => {
 	try {
@@ -16,7 +24,6 @@ const productsController = async () => {
 		productsView.render(products);
 		paginationView.render(model.state.catalog.pagination);
 	} catch (error) {
-		console.log(error);
 		productsView.showError();
 	}
 };
@@ -36,7 +43,7 @@ const filtersController = async (filterType) => {
 	}
 };
 
-const paginationConroller = async (page) => {
+const paginationController = async (page) => {
 	try {
 		model.setCurrPage(page);
 
@@ -45,8 +52,8 @@ const paginationConroller = async (page) => {
 		model.clearProductsInState();
 		model.setProductsToState(products);
 
-		productsView.render(model.state.catalog.products);
-
+		productsView.update(model.state.catalog.products);
+		paginationView.update(model.state.catalog.pagination);
 		window.scrollTo({
 			top: 0,
 			behavior: 'smooth',
@@ -58,8 +65,11 @@ const paginationConroller = async (page) => {
 
 export const shopPageInit = () => {
 	shopPageView.render();
+
+	initializeViews();
+
 	productsView.loadHandler(productsController);
 	productsView.filtersClickHandler(filtersController);
 	productsView.togglePriceHandler();
-	paginationView.paginationHandler(paginationConroller);
+	paginationView.paginationHandler(paginationController);
 };

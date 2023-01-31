@@ -1,12 +1,12 @@
 import View from './view';
-import { formatDate } from '../helpers';
+import { formatDate } from '../utils/helpers';
 
 class PostsView extends View {
 	_error = 'Posts is 404';
 
-	loadHandler(handler) {
-		this._parent = document.querySelector('.post-cards');
+	_parent = document.querySelector('.post-cards');
 
+	loadHandler(handler) {
 		if (!this._parent) return;
 
 		handler();
@@ -54,4 +54,4 @@ class PostsView extends View {
 	}
 }
 
-export default new PostsView();
+export default PostsView;

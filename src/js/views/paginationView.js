@@ -1,23 +1,18 @@
 import View from './view';
 
 class PaginationView extends View {
-	#pagination;
-
 	_error = 'Pagination is 404';
 
+	_parent = document.querySelector('.pagination');
+
 	_createLayout() {
-		this._parent = document.querySelector('.pagination');
-
-		if (!this._parent) return;
-
 		const { currPage, pagesCount } = this._data;
 
 		return this.createPagination(currPage, pagesCount);
 	}
 
 	paginationHandler(handler) {
-		this.#pagination = document.querySelector('.pagination');
-		this.#pagination.addEventListener('click', (e) => {
+		this._parent.addEventListener('click', (e) => {
 			const page = +e.target.textContent;
 			handler(page);
 		});
@@ -41,4 +36,4 @@ class PaginationView extends View {
 	}
 }
 
-export default new PaginationView();
+export default PaginationView;
