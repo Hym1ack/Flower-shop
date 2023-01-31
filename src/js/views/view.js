@@ -22,21 +22,31 @@ class View {
 		const newElements = Array.from(newDOM.querySelectorAll('*'));
 		const curElements = Array.from(this._parent.querySelectorAll('*'));
 
-		newElements.forEach((newEl, i) => {
-			const curEl = curElements[i];
+		if (newElements.length > curElements.length) {
+			this.render(this._data);
+		}
 
-			if (
-				!newEl.isEqualNode(curEl) &&
-				newEl.firstChild?.nodeValue.trim() !== ''
-			) {
-				curEl.textContent = newEl.textContent;
+		curElements.forEach((curEl, i) => {
+			const newEl = newElements[i];
+
+			if (i >= newElements.length) {
+				curElements[i]?.remove();
+			} else {
+				this.#checkNodeEqual(newEl, curEl);
 			}
-
-			if (!newEl.isEqualNode(curEl))
-				Array.from(newEl.attributes).forEach((attr) =>
-					curEl.setAttribute(attr.name, attr.value)
-				);
 		});
+	}
+
+	#checkNodeEqual(newEl, curEl) {
+		if (!newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== '') {
+			// eslint-disable-next-line no-param-reassign
+			curEl.textContent = newEl.textContent;
+		}
+
+		if (!newEl.isEqualNode(curEl))
+			Array.from(newEl.attributes).forEach((attr) =>
+				curEl.setAttribute(attr.name, attr.value)
+			);
 	}
 
 	showLoader() {
